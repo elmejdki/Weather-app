@@ -1,3 +1,5 @@
+import { getUnit } from '../../utilities/usefullMethods';
+
 export default function Header() {
   const header = document.createElement('header');
 
@@ -14,7 +16,8 @@ export default function Header() {
   const error = document.createElement('div');
 
   unitsSwitcher.className = 'temprature-units';
-  celisuesBtn.className = 'selected';
+  celisuesBtn.className = getUnit() === 'C' ? 'selected' : '';
+  farenhietBtn.className = getUnit() === 'C' ? 'selected' : '';
   searchField.className = 'search-field';
   loader.className = 'loader';
   fieldGroup.className = 'field-group';
