@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 import countries from '../../countries.json';
 
-export default function (todayWeather) {
+export default function Hero(todayWeather) {
   const [weather] = todayWeather.weather;
 
   const {

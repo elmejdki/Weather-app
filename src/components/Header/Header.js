@@ -1,4 +1,4 @@
-export default function () {
+export default function Header() {
   const header = document.createElement('header');
 
   const unitsSwitcher = document.createElement('div');

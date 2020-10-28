@@ -1,4 +1,4 @@
-export default function (forcastData) {
+export default function Forcast(forcastData) {
   const extrasInfo = document.createElement('div');
 
   let dayDetails;

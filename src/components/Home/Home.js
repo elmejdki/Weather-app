@@ -2,7 +2,7 @@ import getHeader from '../Header/Header';
 import getHero from '../Hero/Hero';
 import getForcast from '../Forcast/Forcast';
 
-export default function (todayWeather, forcastWeather, cityImage) {
+export default function Home(todayWeather, forcastWeather, cityImage) {
   const container = document.createElement('div');
   const { body } = document;
 
