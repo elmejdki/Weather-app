@@ -36,13 +36,26 @@ async function getTodayWeather(city) {
   return weatherData;
 }
 
+async function getForcastWeather(city) {
+  const response = await fetch(
+    `http://api.openweathermap.org/data/2.5/forecast?q=${city}&${getUnit() === 'C' ? 'units=metric' : ''}&appid=${apiKeys.openWeather}`,
+  );
+
+  if (response.status === 404) {
+    throw new Error('City not found');
+  }
+
+  const weatherData = await response.json();
+  return weatherData;
+}
+
 async function getCityImage(city) {
   const response = await fetch(
     `https://api.unsplash.com/photos/random?count=1&query=${city}&client_id=${apiKeys.unsplash}`,
   );
 
   if (response.status === 404) {
-    throw new Error('city not found');
+    throw new Error('City not found');
   }
 
   const [{ urls: { regular } }] = await response.json();
@@ -54,9 +67,11 @@ async function run() {
   try {
     const userCity = await getUserCity();
     const weatherData = await getTodayWeather(userCity);
+    const forcastWeather = await getForcastWeather(userCity);
     const cityImage = await getCityImage(userCity);
 
-    renderHome(weatherData, cityImage);
+    renderHome(weatherData, forcastWeather, cityImage);
+    console.log(forcastWeather);
   } catch (err) {
     console.log(err.message);
   }
