@@ -1,3 +1,6 @@
+import './main.scss';
+import renderHome from './components/Home/Home';
+
 const apiKeys = {
   ipGeolocation: '7202d97c1c3e489392a751327f3ccb8f',
   openWeather: '6d45528c2a76ce912279f18cb573306c',
@@ -53,7 +56,7 @@ async function run() {
     const weatherData = await getTodayWeather(userCity);
     const cityImage = await getCityImage(userCity);
 
-    console.log(weatherData, cityImage);
+    renderHome(weatherData, cityImage);
   } catch (err) {
     console.log(err.message);
   }
