@@ -7,8 +7,7 @@ export default function (forcastData) {
   let weatherLogo;
   let weatherStatus;
   let tempContainer;
-  let min;
-  let max;
+  let tempature;
 
   extrasInfo.className = 'extras-weather-info';
 
@@ -35,8 +34,7 @@ export default function (forcastData) {
     weatherLogo = document.createElement('div');
     weatherStatus = document.createElement('div');
     tempContainer = document.createElement('div');
-    min = document.createElement('span');
-    max = document.createElement('span');
+    tempature = document.createElement('span');
 
     extrasInfo.className = 'extras-weather-info';
 
@@ -45,25 +43,21 @@ export default function (forcastData) {
     time.className = 'time';
     weatherStatus.className = 'weather-status';
     tempContainer.className = 'temp';
-    min.className = 'min';
-    max.className = 'max';
+    tempature.className = 'current-temp tempature';
 
     today = new Date(forcast.dt * 1000 - forcastData.city.timezone * 1000);
     day.textContent = getDay(today);
 
     time.textContent = `${today.getHours()}:00`;
     weatherLogo.className = `weather-logo ${forcast.weather[0].main.toLowerCase()}`;
-    min.textContent = `${forcast.main.temp_min}°`;
-    max.textContent = `${forcast.main.temp_max}°`;
+    tempature.innerHTML = `<span>${forcast.main.temp}</span>°`;
 
     dayDetails.appendChild(day);
     dayDetails.appendChild(time);
     dayDetails.appendChild(weatherLogo);
     dayDetails.appendChild(weatherStatus);
 
-    tempContainer.appendChild(min);
-    tempContainer.innerHTML += ' / ';
-    tempContainer.appendChild(max);
+    tempContainer.appendChild(tempature);
     dayDetails.appendChild(tempContainer);
     extrasInfo.appendChild(dayDetails);
   });

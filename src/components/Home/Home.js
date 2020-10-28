@@ -4,6 +4,7 @@ import getForcast from '../Forcast/Forcast';
 
 export default function (todayWeather, forcastWeather, cityImage) {
   const container = document.createElement('div');
+  const { body } = document;
 
   container.className = 'container';
   container.style.backgroundImage = `url(${cityImage})`;
@@ -13,7 +14,8 @@ export default function (todayWeather, forcastWeather, cityImage) {
   const forcastSection = getForcast(forcastWeather);
 
   container.appendChild(header);
+  heroSection.appendChild(forcastSection);
   container.appendChild(heroSection);
-  container.appendChild(forcastSection);
-  document.body.appendChild(container);
+  body.innerHTML = '';
+  body.appendChild(container);
 }

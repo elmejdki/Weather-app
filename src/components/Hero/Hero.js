@@ -14,7 +14,7 @@ export default function (todayWeather) {
   const sunriseDate = new Date(sunrise * 1000 - timezone * 1000);
   const sunsetDate = new Date(sunset * 1000 - timezone * 1000);
 
-  const main = document.createElement('div');
+  const main = document.createElement('main');
 
   const hero = document.createElement('div');
 
@@ -48,7 +48,7 @@ export default function (todayWeather) {
   locationDetails.className = 'location-details';
   cityName.className = 'city-name';
   countryName.className = 'country-name';
-  currentTemp.className = 'current-temp temp';
+  currentTemp.className = 'current-temp tempature';
   date.className = 'date';
   todayWeatherInfo.className = 'today-weather-info';
   weatherStatus.className = 'weather-status';
@@ -57,9 +57,9 @@ export default function (todayWeather) {
   details.className = 'details';
 
   tempContainer.className = 'temp';
-  feelsLike.className = 'feels_like';
-  minTemp.className = 'min';
-  maxTemp.className = 'max';
+  feelsLike.className = 'feels_like tempature';
+  minTemp.className = 'min tempature';
+  maxTemp.className = 'max tempature';
   sunriseContainer.className = 'sunrise';
 
   otherDetails.className = 'other-details';

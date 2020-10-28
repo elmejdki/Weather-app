@@ -13,10 +13,6 @@ body {
 .container {
   width: 100vw;
   height: 100vh;
-
-  // TODO: change the backimage with JS
-
-  /* background-image: url(https://images.unsplash.com/photo-1525186402429-b4ff38bedec6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2134&q=80); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -51,7 +47,6 @@ header {
 }
 
 .temprature-units {
-  color: rgba(0, 0, 0, 0.678);
   font-weight: bold;
   border: white solid 2px;
   border-radius: 40px;
@@ -59,6 +54,7 @@ header {
 }
 
 .temprature-units button {
+  color: rgba(250, 250, 250, 0.678);
   padding: 3px 10px;
   cursor: pointer;
   background: none;
@@ -324,11 +320,10 @@ header {
 }
 
 .day-details .temp {
-  font-size: 12px;
-  color: grey;
+  font-size: 20px;
 }
 
-.day-details .temp .max {
+.day-details .temp .current-temp {
   color: white;
 }
 
