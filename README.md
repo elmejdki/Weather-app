@@ -1,57 +1,72 @@
-# Project Name
+# Restaurant Page
 
-> One paragraph statement about the project.
+> This a simple weather application, that detect users location at first and then show weather data for Today and 5 days forcast, it also allow users to look for weather info in other cities in the world by typing the name of the city in the search field on the top right corner and also you can change tempature unit but toggling the button on the left top corner. 
 
 ![screenshot](./app_screenshot.png)
 
-Additional description about the project and its features.
-
 ## Built With
 
-- Major languages,
-- frameworks,
-- technologies used
+- Vanilla JavaScript,
+- the CSS preprocessor SCSS,
+- webpack,
+- babel,
+- stylelint,
+- ESlint
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo](https://elmejdki.github.io/Restaurant-page/)
 
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
+## Getting started
 
 ### Prerequisites
 
+In order to have this project up and running you will need:
+
+- NodeJS 10+
+
 ### Setup
 
-### Install
+First you need to clone this project using one of the links above, using this command:
 
-### Usage
+`git clone RESPOSITRY_LINK`
 
-### Run tests
+Then you should run: `npm install`
+
+And afterwards you supposed to run: `npm run server`, to run the project in your local machine.
+
+Congrats the project is fully working.
+
+_You may have some issues with the `image-webpack-loader`  but that depend on your operating system each operating system has his own way to solve it, if you goggled it just for some couple minutes I'm sure you will find the solution, if not you can contact me any time you need I will be happy to help, my contact informations are below_
 
 ### Deployment
 
+For deployment I used GitHub pages, but as you see my project is full of files and the `index.html` file is inside the `build/` folder, so in order to deploy using GitHub pages we need to put the `index.html` file in the root of the repository, in order to do this we will use a simple trick, please follow the commands bellow if you want to deploy on your on repository:
 
+- If you have the `build/ `  folder declared inside the `.gitignore`  file please remove it form there.
 
-## Authors
+- run `npm run build`  to generate the build folder.
 
-👤 **Author1**
+- then make sure that git knows about your subtree, using this command:
 
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
+  ```
+  git add build && git commit -m "Initial build subtree commit"
+  ```
 
-👤 **Author2**
+- after that use subtree push to send it to gh-pages branch in GitHub:
 
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
+  ```
+  git subtree push --prefix build origin gh-pages
+  ```
+
+Now you have finish check the link of GitHub pages you will find your project deployed there. you can find the link on the repository settings page.
+## Author
+
+👤 **Zakariae El Mejdki**
+
+- Github: [@elmejdki](https://github.com/elmejdki)
+- Twitter: [@zakariae_elmejdki](https://twitter.com/zakariaemejdki)
+- Linkedin: [El Mejdki Zakariae](https://www.linkedin.com/in/zakariaeelmejdki/)
 
 ## 🤝 Contributing
 
@@ -62,12 +77,6 @@ Feel free to check the [issues page](issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
 
