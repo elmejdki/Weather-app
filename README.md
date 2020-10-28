@@ -15,7 +15,7 @@
 
 ## Live Demo
 
-[Live Demo](https://elmejdki.github.io/Restaurant-page/)
+[Live Demo](https://elmejdki.github.io/Weather-app/)
 
 ## Getting started
 
@@ -72,7 +72,7 @@ Now you have finish check the link of GitHub pages you will find your project de
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/elmejdki/Weather-app/issues).
 
 ## Show your support
 
