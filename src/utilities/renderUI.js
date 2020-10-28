@@ -5,13 +5,19 @@ import renderHome from '../components/Home/Home';
 function showError(err) {
   const error = document.querySelector('.field-group .error');
   const loader = document.querySelector('.loader');
-  error.textContent = err;
-  error.style.display = 'block';
-  loader.style.display = 'none';
+  if (error && loader) {
+    error.textContent = err;
+    error.style.display = 'block';
+    loader.style.display = 'none';
 
-  setTimeout(() => {
-    error.style.display = 'none';
-  }, 3000);
+    setTimeout(() => {
+      error.style.display = 'none';
+    }, 3000);
+  } else {
+    const { body } = document;
+    body.textContent = err;
+    body.style.color = 'red';
+  }
 }
 
 export default function renderEvents() {
