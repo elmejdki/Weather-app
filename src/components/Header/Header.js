@@ -9,6 +9,7 @@ export default function Header() {
   const loader = document.createElement('div');
   const fieldGroup = document.createElement('div');
   const searchIcon = document.createElement('i');
+  const form = document.createElement('form');
   const countryInput = document.createElement('input');
   const error = document.createElement('div');
 
@@ -37,7 +38,8 @@ export default function Header() {
   fieldGroup.appendChild(searchIcon);
   fieldGroup.appendChild(countryInput);
   fieldGroup.appendChild(error);
-  searchField.appendChild(fieldGroup);
+  form.appendChild(fieldGroup);
+  searchField.appendChild(form);
   header.appendChild(searchField);
 
   return header;

@@ -34,7 +34,7 @@ export default function renderEvents() {
   const celciusBtn = document.querySelector('.temprature-units button:first-child');
   const tempatureContainers = document.querySelectorAll('.tempature span');
   const loader = document.querySelector('.loader');
-  const searchInput = document.getElementById('country');
+  const form = document.querySelector('form');
 
   function switchClassInBtn() {
     farenheitBtn.classList.toggle('selected');
@@ -56,9 +56,12 @@ export default function renderEvents() {
     }
   }
 
-  searchInput.addEventListener('keyup', e => {
-    const city = e.currentTarget.value.trim();
-    if (e.code === 'Enter' && city.length > 0) {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const city = e.currentTarget.querySelector('input').value.trim();
+
+    if (city.length > 0) {
       renderUI(city);
     }
   });
