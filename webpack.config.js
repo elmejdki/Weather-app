@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+
 
 module.exports = {
   mode: 'development',
@@ -76,8 +78,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Weather App',
+      title: 'Takss',
+      favicon: './favicon.png',
     }),
+    new FaviconsWebpackPlugin('./favicon.png'),
     new CleanWebpackPlugin({
       cleanStaleWebpackAssets: false,
     }),

@@ -15,6 +15,7 @@
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
+    "favicons-webpack-plugin": "^4.2.0",
     "file-loader": "^6.1.0",
     "gifsicle": "^5.1.0",
     "html-webpack-plugin": "^4.5.0",
