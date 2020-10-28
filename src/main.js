@@ -3,7 +3,7 @@ import renderHome from './components/Home/Home';
 import {
   getUserCity, getCityImage, getTodayWeather, getForcastWeather,
 } from './utilities/apiHandler';
-import renderUI from './utilities/renderUI';
+import renderEvents, { showError } from './utilities/renderUI';
 
 async function run() {
   try {
@@ -13,9 +13,9 @@ async function run() {
     const cityImage = await getCityImage(userCity);
 
     renderHome(weatherData, forcastWeather, cityImage);
-    renderUI();
+    renderEvents();
   } catch (err) {
-    console.log(err.message);
+    showError(err.message);
   }
 }
 

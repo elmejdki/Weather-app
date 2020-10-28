@@ -1,14 +1,52 @@
 import { celciusToFarenheit, farenheitToCelcius } from './usefullMethods';
+import { getCityImage, getTodayWeather, getForcastWeather } from './apiHandler';
+import renderHome from '../components/Home/Home';
 
-export default function () {
+function showError(err) {
+  const error = document.querySelector('.field-group .error');
+  const loader = document.querySelector('.loader');
+  error.textContent = err;
+  error.style.display = 'block';
+  loader.style.display = 'none';
+
+  setTimeout(() => {
+    error.style.display = 'none';
+  }, 3000);
+}
+
+export default function renderEvents() {
   const farenheitBtn = document.querySelector('.temprature-units button:last-child');
   const celciusBtn = document.querySelector('.temprature-units button:first-child');
   const tempatureContainers = document.querySelectorAll('.tempature span');
+  const loader = document.querySelector('.loader');
+  const searchInput = document.getElementById('country');
 
   function switchClassInBtn() {
     farenheitBtn.classList.toggle('selected');
     celciusBtn.classList.toggle('selected');
   }
+
+  async function renderUI(city) {
+    try {
+      loader.style.display = 'block';
+      const weatherData = await getTodayWeather(city);
+      const forcastWeather = await getForcastWeather(city);
+      const cityImage = await getCityImage(city);
+
+      renderHome(weatherData, forcastWeather, cityImage);
+      loader.style.display = 'none';
+      renderEvents();
+    } catch (err) {
+      showError(err.message);
+    }
+  }
+
+  searchInput.addEventListener('keyup', e => {
+    const city = e.currentTarget.value.trim();
+    if (e.code === 'Enter' && city.length > 0) {
+      renderUI(city);
+    }
+  });
 
   farenheitBtn.addEventListener('click', e => {
     if (!e.currentTarget.classList.contains('selected')) {
@@ -32,3 +70,5 @@ export default function () {
     }
   });
 }
+
+export { showError };
