@@ -22,7 +22,7 @@ export default function Forcast(forcastData) {
       return 'Tomorrow';
     }
 
-    return `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
+    return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
   }
 
   let today;

@@ -71,7 +71,7 @@ export default function Hero(todayWeather) {
   cityName.textContent = todayWeather.name;
   countryName.textContent = countries[country];
   currentTemp.innerHTML = `<span>${temp}</span>°`;
-  date.textContent = `${dateTime.getDate()}/${dateTime.getMonth()}/${dateTime.getFullYear()}`;
+  date.textContent = `${dateTime.getDate()}/${dateTime.getMonth() + 1}/${dateTime.getFullYear()}`;
   status.textContent = weather.description;
 
   feelsLike.innerHTML = `Feels Like <span>${feels_like}</span>°`;
