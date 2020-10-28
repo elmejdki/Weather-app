@@ -1,10 +1,5 @@
 import { getUnit } from './usefullMethods';
-
-const apiKeys = {
-  ipGeolocation: '7202d97c1c3e489392a751327f3ccb8f',
-  openWeather: '6d45528c2a76ce912279f18cb573306c',
-  unsplash: 'PteMhxfvY7LXCzelxMqDvwwojo-b0Yyib05cYQ48v4I',
-};
+import apiKeys from './secrets.json';
 
 async function getUserCity() {
   const response = await fetch(`https:api.ipgeolocation.io/ipgeo?apiKey=${apiKeys.ipGeolocation}`);
