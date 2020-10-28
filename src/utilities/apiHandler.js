@@ -2,7 +2,7 @@ import { getUnit } from './usefullMethods';
 import apiKeys from './secrets.json';
 
 async function getUserCity() {
-  const response = await fetch(`https:api.ipgeolocation.io/ipgeo?apiKey=${apiKeys.ipGeolocation}`);
+  const response = await fetch(`https://api.ipgeolocation.io/ipgeo?apiKey=${apiKeys.ipGeolocation}`);
   const { city } = await response.json();
   return city;
 }

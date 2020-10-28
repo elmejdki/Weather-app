@@ -20,6 +20,15 @@ function showError(err) {
   }
 }
 
+function fixMixedContent() {
+  const { head } = document;
+  const meta = document.createElement('meta');
+  meta.setAttribute('http-equiv', 'Content-Security-Policy');
+  meta.setAttribute('content', 'upgrade-insecure-requests');
+
+  head.appendChild(meta);
+}
+
 export default function renderEvents() {
   const farenheitBtn = document.querySelector('.temprature-units button:last-child');
   const celciusBtn = document.querySelector('.temprature-units button:first-child');
@@ -77,4 +86,4 @@ export default function renderEvents() {
   });
 }
 
-export { showError };
+export { showError, fixMixedContent };

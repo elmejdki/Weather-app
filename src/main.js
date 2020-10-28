@@ -3,10 +3,11 @@ import renderHome from './components/Home/Home';
 import {
   getUserCity, getCityImage, getTodayWeather, getForcastWeather,
 } from './utilities/apiHandler';
-import renderEvents, { showError } from './utilities/renderUI';
+import renderEvents, { showError, fixMixedContent } from './utilities/renderUI';
 
 async function run() {
   try {
+    fixMixedContent();
     const userCity = await getUserCity();
     const weatherData = await getTodayWeather(userCity);
     const forcastWeather = await getForcastWeather(userCity);
