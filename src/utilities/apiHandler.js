@@ -9,7 +9,7 @@ async function getUserCity() {
 
 async function getTodayWeather(city) {
   const response = await fetch(
-    `http://api.openweathermap.org/data/2.5/weather?q=${city}&${getUnit() === 'C' ? 'units=metric' : ''}&appid=${apiKeys.openWeather}`,
+    `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=${getUnit() === 'C' ? 'metric' : 'imperial'}&appid=${apiKeys.openWeather}`,
   );
 
   if (response.status === 200) {
@@ -22,7 +22,7 @@ async function getTodayWeather(city) {
 
 async function getForcastWeather(city) {
   const response = await fetch(
-    `http://api.openweathermap.org/data/2.5/forecast?q=${city}&${getUnit() === 'C' ? 'units=metric' : ''}&appid=${apiKeys.openWeather}`,
+    `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${getUnit() === 'C' ? 'metric' : 'imperial'}&appid=${apiKeys.openWeather}`,
   );
 
   if (response.status === 404) {
