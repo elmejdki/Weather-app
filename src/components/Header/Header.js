@@ -17,7 +17,7 @@ export default function Header() {
 
   unitsSwitcher.className = 'temprature-units';
   celisuesBtn.className = getUnit() === 'C' ? 'selected' : '';
-  farenhietBtn.className = getUnit() === 'C' ? 'selected' : '';
+  farenhietBtn.className = getUnit() === 'F' ? 'selected' : '';
   searchField.className = 'search-field';
   loader.className = 'loader';
   fieldGroup.className = 'field-group';
