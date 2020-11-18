@@ -60,6 +60,12 @@ For deployment I used GitHub pages, but as you see my project is full of files a
   ```
 
 Now you have finish check the link of GitHub pages you will find your project deployed there. you can find the link on the repository settings page.
+
+# Future Feature
+
+- Add an API that returns images based on location and weather.
+- User an accurate API for weather to get better weather data.
+
 ## Author
 
 👤 **Zakariae El Mejdki**
