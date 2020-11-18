@@ -1,6 +1,6 @@
 # Weather App: Takss
 
-> This a simple weather application, that detect users location at first and then show weather data for Today and 5 days forcast, it also allow users to look for weather info in other cities in the world by typing the name of the city in the search field on the top right corner and also you can change tempature unit but toggling the button on the left top corner. 
+> This a simple weather application, that detects users location at first and then shows weather data for Today and 5 days forecast, it also allows users to look for weather info in other cities in the world by typing the name of the city in the search field on the top right corner and also you can change temperature unit but toggling the button on the left top corner.
 
 ![screenshot](./app_screenshot.png)
 
@@ -27,23 +27,25 @@ In order to have this project up and running you will need:
 
 ### Setup
 
-First you need to clone this project using one of the links above, using this command:
+First, you need to clone this project using one of the links above, using this command:
 
-`git clone RESPOSITRY_LINK`
+```
+git clone RESPOSITRY_LINK
+```
 
 Then you should run: `npm install`
 
-And afterwards you supposed to run: `npm run server`, to run the project in your local machine.
+And afterward, you supposed to run: `npm run server`, to run the project in your local machine.
 
 Congrats the project is fully working.
 
-_You may have some issues with the `image-webpack-loader`  but that depend on your operating system each operating system has his own way to solve it, if you goggled it just for some couple minutes I'm sure you will find the solution, if not you can contact me any time you need I will be happy to help, my contact informations are below_
+*You may have some issues with the `image-webpack-loader`  but that depends on your operating system each operating system has his own way to solve it, if you googled it just for some couple minutes I'm sure you will find the solution, if not you can contact me any time you need I will be happy to help, my contact information are below*
 
 ### Deployment
 
-For deployment I used GitHub pages, but as you see my project is full of files and the `index.html` file is inside the `build/` folder, so in order to deploy using GitHub pages we need to put the `index.html` file in the root of the repository, in order to do this we will use a simple trick, please follow the commands bellow if you want to deploy on your on repository:
+For deployment, I used GitHub pages, but as you see my project is full of files and the `index.html` file is inside the `build/` folder, so in order to deploy using GitHub pages we need to put the `index.html` file in the root of the repository, in order to do this we will use a simple trick, please follow the commands below if you want to deploy on your own repository:
 
-- If you have the `build/ `  folder declared inside the `.gitignore`  file please remove it form there.
+- If you have the `build/`  folder declared inside the `.gitignore`  file please remove it from there.
 
 - run `npm run build`  to generate the build folder.
 
@@ -59,12 +61,12 @@ For deployment I used GitHub pages, but as you see my project is full of files a
   git subtree push --prefix build origin gh-pages
   ```
 
-Now you have finish check the link of GitHub pages you will find your project deployed there. you can find the link on the repository settings page.
+  Now you have finished you can check the link to GitHub pages you will find your project deployed there. you can find the link on the repository settings page.
 
 # Future Feature
 
 - Add an API that returns images based on location and weather.
-- User an accurate API for weather to get better weather data.
+- User an accurate API for the weather to get better weather data.
 
 ## Author
 
