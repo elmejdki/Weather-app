@@ -1,4 +1,4 @@
-# Restaurant Page
+# Weather App: Takss
 
 > This a simple weather application, that detect users location at first and then show weather data for Today and 5 days forcast, it also allow users to look for weather info in other cities in the world by typing the name of the city in the search field on the top right corner and also you can change tempature unit but toggling the button on the left top corner. 
 
